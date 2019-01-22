@@ -76,10 +76,12 @@ header {
     img {
         width: 100%;
     }
-    .social_pc{
+
+    .social_pc {
         width: 36px;
         height: 36px;
     }
+
     .logo {
         margin: 0 auto;
         width: 140px;
@@ -136,6 +138,7 @@ header {
     }
 
 }
+
 // END HEADER
 
 // NAV
@@ -223,6 +226,7 @@ nav {
         }
     }
 }
+
 // END NAV
 
 // CONTENT 1
@@ -331,6 +335,7 @@ nav {
         }
     }
 }
+
 //END CONTENT 1
 
 // CONTENT 2
@@ -420,6 +425,7 @@ nav {
         font-weight: 500;
         background: $br;
         color: white;
+
         &:hover {
             color: $br;
             background: white;
@@ -428,15 +434,17 @@ nav {
         @include mQ {
             width: 100%;
             padding: 10px 0;
+
             &:hover {
                 color: white;
                 background: $br;
             }
         }
-        
+
     }
 
 }
+
 // END CONTENT 2
 
 // CONTENT 3
@@ -471,7 +479,9 @@ nav {
         }
     }
 
-    .wrap {
+    .wrap {}
+
+    .container {
         @include clearFix();
         margin-top: 50px;
     }
@@ -567,24 +577,28 @@ nav {
         font-weight: 500;
         background: $br;
         color: white;
+
         &:hover {
             color: $br;
             background: white;
         }
+
         @include mQ {
             width: 100%;
             padding: 10px 0;
+
             &:hover {
                 color: white;
                 background: $br;
             }
         }
 
-        
+
     }
 
 
 }
+
 // END CONTENT 3
 
 // FOOTER
@@ -673,10 +687,12 @@ footer {
     img {
         width: 100%;
     }
-    .ft_icon{
+
+    .ft_icon {
         width: 34px;
     }
 }
+
 // END FOOTER
 //Class menu mobile
 .pd_header {

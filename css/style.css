@@ -320,9 +320,9 @@ nav {
       #content3 .part_news {
         width: 100%;
         float: none; } }
-  #content3 .wrap {
+  #content3 .container {
     margin-top: 50px; }
-    #content3 .wrap:after {
+    #content3 .container:after {
       content: "";
       display: block;
       clear: both; }
