@@ -1,0 +1,682 @@
+//CLEAR FLOAT
+@mixin clearFix {
+    &:after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+}
+
+//BREAKPOINT
+@mixin mQ {
+    @media screen and (max-width: 767px) {
+        @content;
+    }
+}
+
+//COLOR
+$br:#642200;
+
+//FONT
+$gothic:"游ゴシック",
+YuGothic,
+"ヒラギノ角ゴ Pro",
+"Hiragino Kaku Gothic Pro",
+"メイリオ",
+"Meiryo",
+sans-serif;
+$mincho: "游明朝",
+YuMincho,
+"ヒラギノ明朝 ProN W3",
+"Hiragino Mincho ProN",
+"HG明朝E",
+"ＭＳ Ｐ明朝",
+serif;
+
+.wrap {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    @include mQ {
+        width: 80%;
+    }
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    min-width: 1000px;
+
+    @include mQ {
+        min-width: 0;
+    }
+}
+
+// HEADER
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 100vh;
+    background-image: url(../img/slideheader.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    margin: 20px;
+    min-width: 960px;
+
+    @include mQ {
+        margin: 10px;
+        min-width: 0;
+    }
+
+    img {
+        width: 100%;
+    }
+    .logo {
+        margin: 0 auto;
+        width: 140px;
+        height: 165px;
+
+        @include mQ() {
+            height: 130px;
+            width: 110px;
+            cursor: pointer;
+        }
+    }
+
+    .logan_ja {
+        font-family: $mincho;
+        font-size: 36px;
+        color: white;
+        font-weight: 600;
+        margin: 60px 0 15px 0;
+        text-align: center;
+        letter-spacing: 18px;
+
+        @include mQ {
+            font-size: 18px;
+
+        }
+
+    }
+
+    .logan_en {
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 4px;
+        word-spacing: 10px;
+        font-weight: bold;
+
+        @include mQ {
+            font-size: 7px;
+        }
+    }
+
+    .menu_sp {
+        display: none;
+
+        @include mQ {
+            display: block;
+            cursor: pointer;
+            float: right;
+            width: 30px;
+            height: 24px;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+    }
+
+}
+// END HEADER
+
+// NAV
+nav {
+    margin-top: 78px;
+    text-align: center;
+
+    @include mQ {
+        margin-top: 0px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        background: #f9f4f0;
+        height: 100%;
+        padding-top: 30px;
+        display: none;
+    }
+
+    a {
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 4px;
+        word-spacing: 10px;
+        color: white;
+        font-weight: bold;
+        line-height: 36px;
+
+        @include mQ {
+            font-size: 18px;
+            color: $br;
+            font-weight: normal;
+        }
+    }
+
+    ul {
+        @include clearFix();
+        display: inline-block;
+    }
+
+    li {
+        float: left;
+        margin-right: 50px;
+
+        @include mQ {
+            float: none;
+            margin-right: 0;
+            margin-top: 15px;
+        }
+    }
+
+    .nav_img {
+        margin-right: 15px;
+
+        @include mQ() {
+            float: left;
+        }
+    }
+
+    .social_pc {
+        @include mQ {
+            display: none;
+        }
+    }
+
+    .social_sp {
+        display: none;
+
+        @include mQ {
+            display: block;
+            width: 39px;
+        }
+    }
+
+    .menu_sp_close {
+        height: 23px;
+        width: 23px;
+        display: none;
+
+        @include mQ {
+
+            margin: 0 35px 0 auto;
+            background-color: #f9f4f0;
+            cursor: pointer;
+
+        }
+    }
+}
+// END NAV
+
+// CONTENT 1
+#content1 {
+    color: $br;
+    @include clearFix();
+
+    .wrap_content {
+        width: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        @include clearFix();
+
+        @include mQ {
+            width: 100%;
+            float: none;
+            padding: 30px 0 45px 0;
+        }
+    }
+
+    .bg_content_l {
+        background-image: url(../img/bg_bake.jpg);
+        float: left;
+    }
+
+    .bg_content_r {
+        background-image: url(../img/bg_cake.jpg);
+        float: right;
+    }
+
+    .box {
+
+        max-width: 523px;
+        margin: 90px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 35px 0 35px 70px;
+        font-size: 14px;
+        height: 100%;
+
+        @include mQ() {
+            font-size: 12px;
+            text-align: center;
+            margin: 30px auto 45px auto;
+            padding: 30px 0;
+            width: 70%;
+        }
+    }
+
+    .logan {
+        font-family: $mincho;
+        font-size: 36px;
+        font-weight: 600;
+
+        @include mQ {
+            font-size: 20px;
+        }
+
+    }
+
+    .p_1 {
+        margin-top: 25px;
+    }
+
+    .p_2 {
+        margin: 12px 0 25px 0;
+
+        @include mQ {
+            margin: 15px 0 25px 0;
+        }
+    }
+
+    button {
+        padding: 3px 68px;
+        border: 2px solid $br;
+        font-family: $gothic;
+        font-size: 16px;
+        color: $br;
+        background: rgba(0, 0, 0, 0);
+        font-weight: 500;
+
+        @include mQ {
+            width: 90%;
+            padding: 10px;
+            font-size: 15px;
+            background: $br;
+            color: white;
+
+        }
+
+        &:hover {
+            background: $br;
+            color: white;
+        }
+    }
+
+    .left_label {
+        width: 110px;
+        float: right;
+        margin-top: -50px;
+        position: relative;
+        margin-right: 30px;
+
+        @include mQ {
+            display: none;
+        }
+    }
+}
+//END CONTENT 1
+
+// CONTENT 2
+#content2 {
+    background-color: #fff3e1;
+    padding: 90px 0;
+
+    @include mQ {
+        padding: 45px 0;
+    }
+
+    .wrap {
+        @include clearFix();
+    }
+
+    .content2_p_pc {
+        font-family: $mincho;
+        font-size: 36px;
+        display: inline;
+        color: $br;
+    }
+
+
+    .rote {
+        position: absolute;
+        top: 12px;
+        display: inline;
+        left: 65.34px;
+
+    }
+
+    .quote {
+        font-family: $gothic;
+        font-weight: 500;
+        font-size: 14px;
+        margin: 20px 0 40px 0;
+        line-height: 2.6;
+
+        @include mQ {
+            margin: 45px 0 30px 0;
+            font-size: 12px;
+        }
+    }
+
+    .lefft_content2 {
+        float: left;
+
+        @include mQ {
+            display: none;
+        }
+    }
+
+    .content2_p_sp {
+        display: none;
+
+        @include mQ {
+            display: block;
+            text-align: center;
+            color: $br;
+        }
+    }
+
+    .jp {
+        font-size: 18px;
+    }
+
+    .en {
+        font-size: 8px;
+        margin-top: 25px;
+    }
+
+    .right_content2 {
+        width: 880px;
+        float: right;
+
+        @include mQ {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    button {
+        padding: 3px 68px;
+        border: 2px solid $br;
+        font-family: $gothic;
+        font-size: 16px;
+        font-weight: 500;
+        background: $br;
+        color: white;
+        &:hover {
+            color: $br;
+            background: white;
+        }
+
+        @include mQ {
+            width: 100%;
+            padding: 10px 0;
+            &:hover {
+                color: white;
+                background: $br;
+            }
+        }
+        
+    }
+
+}
+// END CONTENT 2
+
+// CONTENT 3
+#content3 {
+    padding: 90px 0;
+    background-color: #ff9c46;
+    text-align: center;
+    color: $br;
+
+    @include mQ {
+        padding: 60px 0
+    }
+
+    .brand_news {
+        font-size: 36px;
+        font-family: $mincho;
+        font-weight: 600;
+    }
+
+    .p_news {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    .part_news {
+        width: 30%;
+        float: left;
+
+        @include mQ {
+            width: 100%;
+            float: none;
+        }
+    }
+
+    .wrap {
+        @include clearFix();
+        margin-top: 50px;
+    }
+
+    .news2 {
+        margin: 0 5%;
+
+        @include mQ {
+            margin: 0;
+            margin-top: 40px;
+
+        }
+
+        ;
+    }
+
+    ul {
+        margin-top: 20px;
+        @include clearFix();
+    }
+
+    .text_deco {
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $gothic;
+        border-bottom: 1px solid $br;
+        display: inline;
+
+    }
+
+    li {
+        margin-top: 15px;
+        background-color: #fff3e1;
+        @include clearFix();
+        border: 1px solid #b3b3b3;
+
+    }
+
+    img {
+        width: 80px;
+        height: 80px;
+        float: left;
+
+        @include mQ {
+            width: 20%;
+            height: 100%;
+        }
+    }
+
+    .right_news_li {
+        float: right;
+        line-height: 1.4;
+        text-align: start;
+        width: 193px;
+        padding: 15px 10px 10px 15px;
+        font-family: $gothic;
+        font-size: 13px;
+        font-weight: 500;
+
+        @include mQ {
+            width: 70%;
+            padding: 5%;
+        }
+    }
+
+    .number {
+        @include mQ {
+            font-size: 12px;
+        }
+    }
+
+    .text {
+        color: black;
+
+        @include mQ {
+            font-size: 12px;
+        }
+    }
+
+    .news3 {
+        @include mQ {
+            margin-top: 40px;
+
+        }
+    }
+
+    button {
+        margin-top: 40px;
+        padding: 3px 68px;
+        border: 2px solid $br;
+        font-family: $gothic;
+        font-size: 16px;
+        font-weight: 500;
+        background: $br;
+        color: white;
+        &:hover {
+            color: $br;
+            background: white;
+        }
+        @include mQ {
+            width: 100%;
+            padding: 10px 0;
+            &:hover {
+                color: white;
+                background: $br;
+            }
+        }
+
+        
+    }
+
+
+}
+// END CONTENT 3
+
+// FOOTER
+footer {
+    background-image: url(../img/footer_about.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+    font-family: $gothic;
+    font-weight: 500;
+    padding: 70px 0 90px 0;
+
+    @include mQ {
+        padding: 50px 0 60px 0;
+        font-size: 10px
+    }
+
+    .logo {
+        height: 84px;
+        width: 70px;
+        display: inline-block;
+
+        @include mQ {
+            height: 73px;
+            width: 60px;
+        }
+    }
+
+    .copyright {
+        font-size: 12px;
+
+        @include mQ {
+            font-size: 10px;
+        }
+    }
+
+    .hr {
+        width: 230px;
+        display: inline-block;
+        border: 1px solid white;
+
+        @include mQ {
+            width: 35%;
+        }
+    }
+
+    .hr_top {
+        margin: 30px 0 40px 0;
+
+        @include mQ {
+            margin: 35px 0 25px 0;
+        }
+    }
+
+    .hr_bot {
+        margin: 40px 0 30px 0;
+
+        @include mQ {
+            margin: 25px 0 35px 0;
+        }
+
+    }
+
+    ul {
+        display: inline-block;
+        margin-bottom: 30px;
+
+        @include mQ {
+            margin-bottom: 35px;
+        }
+    }
+
+    li {
+        float: left;
+        margin-right: 15px;
+
+    }
+
+    .line_height {
+        line-height: 2;
+    }
+
+    img {
+        width: 100%;
+    }
+}
+// END FOOTER
+//Class menu mobile
+.pd_header {
+    margin: 0;
+    background: #f9f4f0;
+}
+
+.nav_display {
+    display: block;
+}
