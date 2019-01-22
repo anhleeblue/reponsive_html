@@ -106,9 +106,11 @@ nav {
         font-size: 18px;
         color: #642200;
         font-weight: normal; } }
-  nav ul {
-    display: inline-block; }
-    nav ul:after {
+  nav .wrap_social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+    nav .wrap_social:after {
       content: "";
       display: block;
       clear: both; }
@@ -120,11 +122,11 @@ nav {
         float: none;
         margin-right: 0;
         margin-top: 15px; } }
-  nav .nav_img {
-    margin-right: 15px; }
-    @media screen and (max-width: 767px) {
-      nav .nav_img {
-        float: left; } }
+  nav .nav_img:nth-child(2) {
+    margin: 0 15px; }
+  @media screen and (max-width: 767px) {
+    nav .nav_img {
+      float: left; } }
   @media screen and (max-width: 767px) {
     nav .social_pc {
       display: none; } }
