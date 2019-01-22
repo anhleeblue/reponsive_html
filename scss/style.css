@@ -34,9 +34,6 @@ header {
       min-width: 0; } }
   header img {
     width: 100%; }
-  header .social_pc {
-    width: 36px;
-    height: 36px; }
   header .logo {
     margin: 0 auto;
     width: 140px;
@@ -462,8 +459,6 @@ footer {
     line-height: 2; }
   footer img {
     width: 100%; }
-  footer .ft_icon {
-    width: 34px; }
 
 .pd_header {
   margin: 0;
