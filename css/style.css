@@ -88,6 +88,7 @@ nav {
       position: absolute;
       width: 100%;
       top: 0;
+      left: 0;
       background: #f9f4f0;
       height: 100%;
       padding-top: 30px;
@@ -198,7 +199,9 @@ nav {
       #content1 .p_2 {
         margin: 15px 0 25px 0; } }
   #content1 button {
-    padding: 3px 68px;
+    width: 220px;
+    height: 36px;
+    line-height: 36px;
     border: 2px solid #642200;
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
     font-size: 16px;
@@ -208,7 +211,6 @@ nav {
     @media screen and (max-width: 767px) {
       #content1 button {
         width: 90%;
-        padding: 10px;
         font-size: 15px;
         background: #642200;
         color: white; } }
@@ -287,14 +289,14 @@ nav {
     font-size: 16px;
     font-weight: 500;
     background: #642200;
-    color: white; }
+    color: white;
+    line-height: 36px; }
     #content2 button:hover {
       color: #642200;
       background: white; }
     @media screen and (max-width: 767px) {
       #content2 button {
-        width: 100%;
-        padding: 10px 0; }
+        width: 100%; }
         #content2 button:hover {
           color: white;
           background: #642200; } }
@@ -399,6 +401,7 @@ nav {
     margin-top: 40px;
     width: 300px;
     height: 36px;
+    line-height: 36px;
     border: 2px solid #642200;
     font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
     font-size: 16px;
@@ -410,8 +413,7 @@ nav {
       background: white; }
     @media screen and (max-width: 767px) {
       #content3 button {
-        width: 100%;
-        padding: 10px 0; }
+        width: 100%; }
         #content3 button:hover {
           color: white;
           background: #642200; } }
