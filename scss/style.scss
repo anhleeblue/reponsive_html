@@ -418,7 +418,8 @@ nav {
     }
 
     button {
-        padding: 3px 68px;
+        width: 220px;
+        height: 36px;
         border: 2px solid $br;
         font-family: $gothic;
         font-size: 16px;
@@ -479,11 +480,26 @@ nav {
         }
     }
 
-    .wrap {}
-
     .container {
         @include clearFix();
         margin-top: 50px;
+
+        @include mQ {
+            margin-top: 45px;
+        }
+    }
+
+    .container_box {
+        @include clearFix();
+    }
+
+    .box {
+        @include clearFix();
+        margin-top: 20px;
+
+        @include mQ {
+            margin-top: 15px;
+        }
     }
 
     .news2 {
@@ -498,11 +514,6 @@ nav {
         ;
     }
 
-    ul {
-        margin-top: 20px;
-        @include clearFix();
-    }
-
     .text_deco {
         font-size: 14px;
         font-weight: 500;
@@ -512,12 +523,10 @@ nav {
 
     }
 
-    li {
-        margin-top: 15px;
+    .box {
+        width: 100%;
         background-color: #fff3e1;
-        @include clearFix();
         border: 1px solid #b3b3b3;
-
     }
 
     img {
@@ -535,6 +544,7 @@ nav {
         float: right;
         line-height: 1.4;
         text-align: start;
+        text-align: left;
         width: 193px;
         padding: 15px 10px 10px 15px;
         font-family: $gothic;
@@ -548,12 +558,15 @@ nav {
     }
 
     .number {
+        margin: 0;
+
         @include mQ {
             font-size: 12px;
         }
     }
 
     .text {
+        margin: 0;
         color: black;
 
         @include mQ {
@@ -570,7 +583,8 @@ nav {
 
     button {
         margin-top: 40px;
-        padding: 3px 68px;
+        width: 300px;
+        height: 36px;
         border: 2px solid $br;
         font-family: $gothic;
         font-size: 16px;
